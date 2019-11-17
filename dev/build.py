@@ -33,9 +33,9 @@ shutil.copytree(src_path, sample_path)
 
 
 # copy hip(hiplc) file
-src_path = src_dir / Path('sample.hiplc')
+src_path = src_dir / Path('sample_hda.hiplc')
 if src_path.exists():
-    sample_path = sample_dir / Path('sample.hiplc')
+    sample_path = sample_dir / Path('sample_hda.hiplc')
     if sample_path.exists():
         os.remove(sample_path)
     shutil.copy(src_path, sample_path)

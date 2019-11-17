@@ -1,5 +1,5 @@
 .idea
-backup/*
+backup
 *.pyc
 venv/*
 work
