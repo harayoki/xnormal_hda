@@ -32,10 +32,10 @@ if sample_path.exists():
 shutil.copytree(src_path, sample_path)
 
 
-# copy hip(hiplc) file
-src_path = src_dir / Path('sample.hiplc')
-if src_path.exists():
-    sample_path = sample_dir / Path('sample.hiplc')
-    if sample_path.exists():
-        os.remove(sample_path)
-    shutil.copy(src_path, sample_path)
+# copy hip(hiplc) file > need fixing obj path after copy..
+# src_path = src_dir / Path('sample.hiplc')
+# if src_path.exists():
+#     sample_path = sample_dir / Path('sample.hiplc')
+#     if sample_path.exists():
+#         os.remove(sample_path)
+#     shutil.copy(src_path, sample_path)
