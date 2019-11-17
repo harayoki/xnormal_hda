@@ -99,6 +99,19 @@ def _init_xnormal_module(xnormal_exe_path=''):
     return True
 
 
+def clear_exported_textures(kwargs):
+    node = kwargs['node']
+    textures = [
+        str(node.parm("normal_export_img").eval()),
+        str(node.parm("occlusion_export_img").eval())
+    ]
+    for t in textures:
+        if os.path.isfile(t):
+            print('removed : {}'.format(t))
+            os.remove(t)
+    hou.hscript('glcache -c')
+
+
 def execute(kwargs):
     """
     実際のノード部分
