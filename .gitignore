@@ -1,0 +1,7 @@
+.idea
+backup/*
+*.pyc
+venv/*
+work
+out_tex
+~*
