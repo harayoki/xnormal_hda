@@ -14,14 +14,21 @@ but if you prefer textures baked by xNormal software, this HDA may help U.
 * Installing xNormal software.
 * Houdini 17.5 or higher.
 
-## Sample
+## Run sample hip
 
-Open sample.hip file in sample folder. It is ready for trying xNormal HDA.
-(Only you have to do before is installing xNormal.)
+Double click sample.hiplc file in sample folder to open new Houdini window. It will be ready for trying xNormal HDA.
+When exporting textures, if an error like 'ImportError: No module named hda_xnormal...' happened,
+run code below :
+
+```
+import hou;import os;import sys;sys.path.append((os.path.dirname(hou.hipFile.path()) + '/python2.7libs'))
+```
+
+ in Python shell.
 
 ## Preparation
 
-* Copy hda file from dist folder into the place Houdini can access(e.g. My Documents/houdini17.5/otls/).
+* Copy hda file from dist/hda folder into the place Houdini can access(e.g. My Documents/houdini17.5/otls/).
 * Copy python files (dist/python2.7libs/*.py) into the place Houdini can access(e.g. My Documents/houdini17.5/python2.7libs/).
 
 ## Usage
