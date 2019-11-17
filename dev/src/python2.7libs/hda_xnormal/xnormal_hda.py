@@ -181,8 +181,9 @@ def execute(kwargs):
         temp_out_file,
         width=texture_size,
         height=texture_size,
+
+        # normal params
         gen_normals=gen_normals,
-        gen_ao=gen_ao,
         closest_if_fails=int(node.parm("normal_closest_if_fails").eval()) == 1,
         aa=int(node.parm("normal_aa").eval()),
         tangent_space=int(node.parm("normal_tangent_space").eval()) == 1,
@@ -193,9 +194,21 @@ def execute(kwargs):
         normals_high_texture=int(node.parm("normals_high_texture").eval()) == 1,
         normals_high_matid=int(node.parm("normals_high_matid").eval()) == 1,
 
-        # TODO ao params
-
+        # ao params
+        gen_ao=gen_ao,
+        ao_rays=int(node.parm('ao_rays').eval()),
+        ao_distribution=str(node.parm('ao_distribution').eval()),
+        ao_cone_angle=int(node.parm('ao_cone_angle').eval()),
+        ao_bias=float(node.parm('ao_bias').eval()),
+        ao_pure_occlude=int(node.parm('ao_pure_occlude').eval()) == 1,
+        ao_limit_ray_distance=int(node.parm('ao_limit_ray_distance').eval()) == 1,
+        ao_atten_const=float(node.parm('ao_atten_const').eval()),
+        ao_atten_linear=float(node.parm('ao_atten_linear').eval()),
+        ao_atten_quadratic=float(node.parm('ao_atten_quadratic').eval()),
+        ao_jitter=int(node.parm('ao_jitter').eval()) == 1,
+        ao_ignore_backfaces=int(node.parm('ao_ignore_backfaces').eval()) == 1,
     )
+
     temp_files = [
         _get_config_path()
     ]
@@ -210,6 +223,7 @@ def execute(kwargs):
             os.remove(normal_export_img)
         shutil.copy(normal_out_file, normal_export_img)
         texture_generated = True
+
     if gen_ao:
         ao_out_file = _work_folder + '\\{}_out_occlusion.png'.format(temp_file_prefix)  # 実際に書き出される名前
         temp_files.append(ao_out_file)
@@ -225,6 +239,7 @@ def execute(kwargs):
     if texture_generated and apply_preview_material and clear_cache_after_export:
         hou.hscript('glcache -c')
         # print('GL cahce cleared')
+
     # 一時ファイルの削除 (キャッシュのobjファイルは動作が不安定にならないよう残している)
     delete_temp_files = int(node.parm('delete_temp_files').eval()) == 1
     if delete_temp_files:

@@ -43,6 +43,7 @@ import hou;import os;import sys;sys.path.append((os.path.dirname(hou.hipFile.pat
 * Then texture(s) is(are) exported and applied as new material for confirmation.
 
 This HDA only supports exporting normal and ao map. Other textures will be support if there is demand.
+For further information about each parameters, plz refer general xNormal documents.
 
 ## License
 
