@@ -14,6 +14,7 @@ src_path = src_dir / Path('python2.7libs')
 dist_path = dist_dir / Path('python2.7libs')
 if dist_path.exists():
     shutil.rmtree(dist_path)
+shutil.copytree(src_path, dist_path)
 sample_path = sample_dir / Path('python2.7libs')
 if sample_path.exists():
     shutil.rmtree(sample_path)
