@@ -25,30 +25,33 @@ import hou;import os;import sys;sys.path.append((os.path.dirname(hou.hipFile.pat
 ```
 
  in Python shell.
+ 
+Then select `geo1/xNormal0` node and hit `export` button in property panel, so you'll get result like images below.
+
 
 ![sample node graph](https://pbs.twimg.com/media/EJq1I_xVUAE7PDV?format=jpg&name=small)  
-Sample node graph : normal and ao (as color) textures baked by xNormal HDA are applied 
+Result : normal and ao (as color) textures baked by xNormal HDA are applied 
 
 ![exported](https://pbs.twimg.com/media/EJq1th7UwAEDcZq?format=png&name=medium)  
-Exported textures
+Result : Exported textures
 
 ![exported](https://pbs.twimg.com/media/EJq4Nn0VUAAgWhD?format=jpg&name=small)  
-Result example
+Compare example
 
 ## Preparation
 
-* Copy hda file from dist/hda folder into the place Houdini can access(e.g. My Documents/houdini17.5/otls/).
-* Copy python files (dist/python2.7libs/*.py) into the place Houdini can access(e.g. My Documents/houdini17.5/python2.7libs/).
+* Copy hda file from `dist/hda` folder into the place Houdini can access(e.g. My Documents/houdini17.5/otls/).
+* Copy python files `dist/python2.7libs/*.py` into the place Houdini can access(e.g. My Documents/houdini17.5/python2.7libs/).
 
 ## Usage
 
 * In SOP network, place harayoki-xNormal HDA.
-* Connect low mesh node for input 1.
+* Connect low mesh node for input 1. (must have UV)
 * Connect high mesh node for input 2.
 * Modify xNormal SOP setting. 
 * At least you must apply a texture file path you want to export.
 * Change temp work folder setting, if you don't like default folder.
-* Hit export button(Textures are not exported automatically. I designed so since it takes several seconds). 
+* Hit `export` button(Textures are not exported automatically. I designed so since it takes several seconds). 
 * Then texture(s) is(are) exported and applied as new material for confirmation.
 
 This HDA only supports exporting normal and ao map. Other textures will be support if there is demand.
