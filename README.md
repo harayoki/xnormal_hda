@@ -26,6 +26,9 @@ import hou;import os;import sys;sys.path.append((os.path.dirname(hou.hipFile.pat
 
  in Python shell.
 
+![sample node graph](https://pbs.twimg.com/media/EJqlAk_UwAAwDbI?format=jpg&name=large)
+Sample node graph
+
 ## Preparation
 
 * Copy hda file from dist/hda folder into the place Houdini can access(e.g. My Documents/houdini17.5/otls/).
