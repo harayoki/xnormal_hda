@@ -27,7 +27,7 @@ import hou;import os;import sys;sys.path.append((os.path.dirname(hou.hipFile.pat
  in Python shell.
 
 ![sample node graph](https://pbs.twimg.com/media/EJqlAk_UwAAwDbI?format=jpg&name=large)
-Sample node graph
+Sample node graph : normal and ao (as color) textures baked by xNormal HDA are applied 
 
 ## Preparation
 
