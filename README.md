@@ -45,6 +45,9 @@ import hou;import os;import sys;sys.path.append((os.path.dirname(hou.hipFile.pat
 This HDA only supports exporting normal and ao map. Other textures will be support if there is demand.
 For further information about each parameters, plz refer general xNormal documents.
 
+![property panel](https://pbs.twimg.com/media/EJqgrHXUwAcskHM?format=jpg&name=medium)
+Property panel : Most of xNormal properties can be set here.
+
 ## License
 
 This HDA is under BSD Licence likewise Python-xNormal. See LICENSE.md file for details.  
