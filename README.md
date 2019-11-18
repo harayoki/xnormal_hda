@@ -26,8 +26,14 @@ import hou;import os;import sys;sys.path.append((os.path.dirname(hou.hipFile.pat
 
  in Python shell.
 
-![sample node graph](https://pbs.twimg.com/media/EJqlAk_UwAAwDbI?format=jpg&name=large)
+![sample node graph](https://pbs.twimg.com/media/EJq1I_xVUAE7PDV?format=jpg&name=small)  
 Sample node graph : normal and ao (as color) textures baked by xNormal HDA are applied 
+
+![exported](https://pbs.twimg.com/media/EJq1th7UwAEDcZq?format=png&name=medium)  
+Exported textures
+
+![exported](https://pbs.twimg.com/media/EJq4Nn0VUAAgWhD?format=jpg&name=small)  
+Result example
 
 ## Preparation
 
@@ -48,8 +54,9 @@ Sample node graph : normal and ao (as color) textures baked by xNormal HDA are a
 This HDA only supports exporting normal and ao map. Other textures will be support if there is demand.
 For further information about each parameters, plz refer general xNormal documents.
 
-![property panel](https://pbs.twimg.com/media/EJqgrHXUwAcskHM?format=jpg&name=medium)
+![property panel](https://pbs.twimg.com/media/EJqgrHXUwAcskHM?format=jpg&name=small)  
 Property panel : Most of xNormal properties can be set here.
+
 
 ## License
 
