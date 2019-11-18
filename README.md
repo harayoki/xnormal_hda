@@ -6,7 +6,7 @@ This houdini digital asset(HDA) allows you to make normal or ao texture in SOP n
 Python-xNormal module(https://github.com/orangeduck/Python-xNormal).
 Since original xNormal software is released for Windows OS only, this HDA supports also only Windows OS. 
 Although I recommend using GameDev maps baker SOP or any other something new SOP, which will be included in Game Development Toolset(https://github.com/sideeffects/GameDevelopmentToolset) for general use,
-but if you prefer textures baked by xNormal software, this HDA may help U.
+but if you prefer textures baked by xNormal software, this HDA may help you.
 
 ## Requirements
 
@@ -51,8 +51,5 @@ This HDA is under BSD Licence likewise Python-xNormal. See LICENSE.md file for d
 
 ## History
 
-* WIP for first release
-
-
-
+* v1.0 first release
 
