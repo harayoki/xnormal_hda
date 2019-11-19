@@ -1,5 +1,7 @@
 # xNormal HDA
 
+![pigs](https://pbs.twimg.com/media/EJsz1LaUEAMWckP?format=png&name=small)  
+
 ## About
 
 This houdini digital asset(HDA) allows you to make normal or ao texture in SOP network using xNormal(https://xnormal.net/) and 
@@ -27,7 +29,6 @@ import hou;import os;import sys;sys.path.append((os.path.dirname(hou.hipFile.pat
  in Python shell.
  
 Then select `geo1/xNormal0` node and hit `export` button in property panel, so you'll get result like images below.
-
 
 ![sample node graph](https://pbs.twimg.com/media/EJq1I_xVUAE7PDV?format=jpg&name=small)  
 Result : normal and ao (as color) textures baked by xNormal HDA are applied 
